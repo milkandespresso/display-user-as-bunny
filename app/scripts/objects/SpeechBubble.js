@@ -37,7 +37,7 @@ export default class TextBox {
    * @memberof SpeechBubble
    */
   async buildContent(quote, extra) {
-    const text = quote.substring(0, 20);
+    const text = quote.substring(0, 40) + (quote.length > 40 ? '...' : ''); // add ellipsis if the message is long
 
     return this.scene.add.text(0, 0, text, {
       fontFamily: 'Arial',
@@ -64,7 +64,7 @@ export default class TextBox {
     bubble.fillRoundedRect(6, 6, this.bubbleWidth, this.bubbleHeight, 16);
 
     //  Bubble color
-    bubble.fillStyle(0xffffff, 1);
+    bubble.fillStyle(0xfa9191, 1); // change bubble color here
 
     //  Bubble outline line style
     bubble.lineStyle(4, 0x565656, 1);

@@ -190,6 +190,9 @@ export default class UserSprite extends BaseSprite {
     this.user = config.user;
     this.flags = config.flags;
 
+    console.log(config.user);
+    console.log(config.flags);
+
     if (this.flags && this.flags.subscriber) {
       //this.changeCharacter(KNIGHT);
       this.changeCharacter(VTSUPERFAN);
@@ -328,12 +331,13 @@ export default class UserSprite extends BaseSprite {
       this.speechBubble.destroy();
     }
 
-    this.speechBubble = new SpeechBubble(
+    extra.highlighted = this.flags.highlighted;
+    this.speechBubble = new SpeechBubble( // creating the speech bubble object
       this.scene,
-      0,
-      0,
-      125,
-      50,
+      -50, // x
+      500, // y
+      250, // width
+      100, // height
       message,
       extra
     );
