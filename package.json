@@ -1,8 +1,8 @@
 {
-  "title": "Twitch Avatars",
+  "title": "Display user as bunny",
   "description": "",
   "version": "1.0.0",
-  "url": "https://goldzulu.github.io/twitch-avatars",
+  "url": "https://milkandespresso.github.io/display-user-as-bunny",
   "scripts": {
     "clean": "gulp clean",
     "dist": "gulp dist",
